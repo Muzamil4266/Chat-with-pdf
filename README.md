@@ -1,3 +1,5 @@
+![Chat With PDF](Chat-with-pdf.png)
+
 📚 CHAT WITH PDF - AI-POWERED DOCUMENT SEARCH
 🎯 WHAT IS THIS?
 This is a smart desktop application that lets you talk to your PDF documents. You can select any PDF file, ask questions in plain English, and the AI will find the most relevant answers from your document. It's like having a conversation with your PDFs.
