@@ -68,3 +68,74 @@ To set up the project locally for development, follow these steps:
 ```bash
    git clone [https://github.com/yourusername/chat-with-pdf.git](https://github.com/yourusername/chat-with-pdf.git)
    cd chat-with-pdf
+Create a virtual environment and activate it:
+
+python -m venv venv
+   # On Windows:
+   venv\Scripts\activate
+
+Install the required dependencies:
+
+
+pip install customtkinter easyocr sentence-transformers PyMuPDF pdfplumber rank_bm25 torch torchvision numpy Pillow
+
+
+Run the application:
+
+python FINAL.py
+
+Method 2: Building the Production Installer
+To distribute this app as a fast-loading, professional Windows installer (.exe), use the folder-based bundling method to bypass long decompression load times.
+
+Generate the Optimized Directory via PyInstaller:
+
+pyinstaller --noconfirm --onedir --windowed --name "ChatWithPDF" ^
+     --add-data "hub;hub" --add-data "easyocr_models;easyocr_models" ^
+     --hidden-import fitz --hidden-import PyMuPDF --hidden-import pdfplumber ^
+     --hidden-import rank_bm25 --hidden-import sentence_transformers ^
+     --hidden-import customtkinter --hidden-import easyocr --hidden-import PIL ^
+     --hidden-import numpy --hidden-import torch --hidden-import torchvision ^
+     --hidden-import tkinter --hidden-import tkinter.filedialog ^
+     --collect-all customtkinter --collect-all sentence_transformers --collect-all easyocr ^
+     "FINAL.py"
+
+
+Compile with Inno Setup:
+Open Inno Setup, load the configuration script (installer_config.iss), and compile (Ctrl + F9). This wraps the launcher executable and the underlying _internal dependency folder into a single, high-compression setup wizard (ChatWithPDF_Setup.exe).
+
+💡 How to Use
+Launch the application via the desktop shortcut or run FINAL.py.
+
+Click Upload PDF and select any digital or scanned document.
+
+Wait a brief moment for the local embedding and OCR engine to finish indexing the file.
+
+Type your question into the chat input field at the bottom and hit Enter or click Send.
+
+The application will instantly display the most relevant information extracted right out of the document.
+
+🎯 Applications & Use Cases
+Academic & Educational Research: Speed up literature reviews by asking complex questions across long textbook chapters, research publications, and lecture notes.
+
+Legal & Financial Auditing: Extract hidden information, terms of service, or specific clauses buried within deeply nested corporate financial audits, legal briefs, and balance sheets.
+
+Data Entry Automation: Query scanned paper forms, historical receipts, or invoices without typing out raw text manually thanks to the automatic OCR processing layer.
+
+Confidential Document Management: Interact safely with proprietary engineering files, private medical data, or corporate strategy files without worrying about third-party server privacy policies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
