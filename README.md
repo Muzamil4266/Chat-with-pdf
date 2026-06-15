@@ -1,3 +1,28 @@
+
+
+# Chat with PDF
+
+## Interface Screenshots
+
+### Home Screen
+![Home Screen](interface1.png)
+
+### Upload PDF
+![Upload PDF](intrface2.png)
+
+### Chat Interface
+![Chat Interface](interface3.png)
+
+### Response Screen
+![Response Screen](interface4.png)
+
+### Additional View
+![Additional View](interface5.png)
+
+
+
+
+
 # ChatWithPDF 📄🚀
 
 ChatWithPDF is a high-performance, fully local desktop application built in Python that allows users to have intelligent conversations with their PDF documents. By combining lexical and semantic search engines, the application delivers incredibly accurate, context-aware answers to user queries completely offline.
